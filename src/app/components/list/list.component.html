@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="container col-md-10 col-md-offset-10  table-responsive">
+
+        <div class="row p-4">
+            <div class="col-md-4">
+                <h3>Subir archivos</h3>
+                <input type="file">
+            </div>
+
+            <div class="col-md-push-7">
+                <button class="btn btn-primary">Subir archivo</button>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">N° Cuenta</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">IdVet</th>
+                    <th scope="col">Coordinador</th>
+                    <th scope="col">Celula</th>
+                    <th scope="col">Fecha</th>
+                </tr>
+            </thead>
+            <tbody *ngFor=" let item of list; let i = index;">
+                <tr>
+                    <td>{{ item.cell }}</td>
+                    <td>{{ item.client }}</td>
+                    <td>{{ item.role }}</td>
+                    <td>{{ item.idvet }}</td>
+                    <td>{{ item.coordinator }}</td>
+                    <td>{{ item.cell }}</td>
+                    <td>{{ item.created_date }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
